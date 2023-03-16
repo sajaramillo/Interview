@@ -5,6 +5,10 @@ En esta sección, el postulante deberá resolver una serie de retos para medir s
 ## **Descripción de la aplicación**
 
 La aplicación que se encuentra desarrollada en este repositorio tiene como objetivo mostrar un listado de estudiantes en una tabla simple a partir de la cual se iran solicitando nuevos requerimientos a ser agregados.
+### Antes de comenzar
+Clona el repositorio y crea un branch a partir de **main** el cual tenga el siguiente formato: **feature/NombreAppllido** por ejemplo **feature/CarlosNaranjo** una vez que termines tus retos, genera un pull request contra el branch main.
+
+**"Buena Suerte"**
 
 ### **Retos a cumplir**
 
@@ -22,5 +26,5 @@ La aplicación que se encuentra desarrollada en este repositorio tiene como obje
 	- Score o calificación obtenida
 	 un botón que permita cerrar la ventana modal [![](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto5.png)](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto5.png)
 6. Generar un mock de un API que permita obtener la data quemada para mostrar los datos en la aplicación. Puede usar herramientas libres en línea como **mockapi.io** para obtener la data de manera externa. [![](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto6.png)](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto6.png)
-7. Modifique la aplicación para que lea la data del API antes creado en lugar de la data quemada
+7. Modifique la aplicación para que lea la data del API antes creado en lugar de la data quemada en el código fuente.
 
