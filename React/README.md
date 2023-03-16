@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Entrevista técnica - Reto React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+En esta sección, el postulante deberá resolver una serie de retos para medir su conocimiento básico sobre aplicaciones construidas en react.
 
-## Available Scripts
+## **Descripción de la aplicación**
 
-In the project directory, you can run:
+La aplicación que se encuentra desarrollada en este repositorio tiene como objetivo mostrar un listado de estudiantes mediante una tabla. A partir de esta aplicación base, se iran solicitando nuevos requerimientos a ser añadidos.
 
-### `npm start`
+### **Retos a cumplir**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Como se puede apreciar en la columna # todas las tuplas contienen el número 1, en esta parte se desea agregar un número secuenacial, el cual vaya cambiando automáticamente según el número de registros que muestre la tabla.
+2. En la tabla que muestra la aplicación hay una columna llamada **Estado** la cuál tiene tres posibles valores: "Aprobado, Suspenso y Reprobado". Dicho estado se encuentra quemado en código. Se desea cambiar este comportamiento y generar el estado de manera automática en base al siguiente criterio:
+	- Notas mayores o iguales a 7 ---> Aprobado
+	- Notas entre 5.5 y menores a 7 --> Suspenso
+	- Notas menores a 5.5 --> Reprobado
+3. Una vez completado el punto anterior, agregar un estilo en la columna **Estado** el cual permita mostrar el texto con un fondo color verde claro si el estado es Aprobado, en color amarillo claro si el estado es Suspenso y en color en rojo claro si el estado es Reprobado.
+4. Junto a la columna Estado, agregar una nueva columna la cual no tendrá ninguna cabecera, sino que contendrá un botón cuyo texto será **See details** cuyo color de fondo será un azul electrico y el color de texto será blanco.
+5. Agregar la siguiente funcionalidad al botón recientemente agregado. Cuando el usuario hace click sobre este, mostrar un pop-up (Ventana emergente o modal), la cual contenga la siguiente información:
+	- Nombre del alumno
+	- Score o calificación obtenida
+	 un botón que permita cerrar la ventana modal
+6. Generar un mock de un API que permita obtener la data quemada para mostrar los datos en la aplicación. Puede usar herramientas libres en línea como **mockapi.io** para obtener la data de manera externa.
+7. Modifique la aplicación para que lea la data del API antes creado en lugar de la data quemada
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
