@@ -5,6 +5,9 @@ En esta sección, el postulante deberá resolver una serie de retos para medir s
 ## **Descripción de la aplicación**
 
 La aplicación que se encuentra desarrollada en este repositorio tiene como objetivo mostrar un listado de estudiantes en una tabla simple a partir de la cual se iran solicitando nuevos requerimientos a ser agregados.
+
+[![](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto0.png)](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto0.png)
+
 ### Antes de comenzar
 Clona el repositorio y crea un branch a partir de **main** el cual tenga el siguiente formato: **feature/NombreAppllido** por ejemplo **feature/CarlosNaranjo** una vez que termines tus retos, genera un pull request contra el branch main.
 
