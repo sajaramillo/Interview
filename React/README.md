@@ -4,7 +4,7 @@ En esta sección, el postulante deberá resolver una serie de retos para medir s
 
 ## **Descripción de la aplicación**
 
-La aplicación que se encuentra desarrollada en este repositorio tiene como objetivo mostrar un listado de estudiantes en una tabla simple a partir de la cual se iran solicitando nuevos requerimientos a ser agregados.
+La aplicación que se encuentra desarrollada en este repositorio tiene como objetivo mostrar un listado de estudiantes mediante una tabla. A partir de esta aplicación base, se iran solicitando nuevos requerimientos a ser añadidos.
 
 ### **Retos a cumplir**
 
