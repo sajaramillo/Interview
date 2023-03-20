@@ -4,7 +4,7 @@ En esta sección, el postulante deberá resolver una serie de retos para medir s
 
 ## **Descripción de la aplicación**
 
-La aplicación que se encuentra desarrollada en este repositorio tiene como objetivo mostrar un listado de estudiantes en una tabla simple a partir de la cual se iran solicitando nuevos requerimientos a ser agregados.
+La aplicación que se encuentra desarrollada en este repositorio tiene como objetivo mostrar un listado de estudiantes en una tabla simple a partir de la cual se irán solicitando nuevos requerimientos a ser agregados.
 
 [![](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto0.png)](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto0.png)
 
@@ -15,7 +15,7 @@ Clona el repositorio y crea un branch a partir de **main** el cual tenga el sigu
 
 ### **Retos a cumplir**
 
-1. Como se puede apreciar en la columna # todas las tuplas contienen el número 1, en esta parte se desea agregar un número secuenacial, el cual vaya cambiando automáticamente según el número de registros que muestre la tabla. [![](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto1.png)](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto1.png)
+1. Como se puede apreciar en la columna # todas las tuplas contienen el número 1, en esta parte se desea agregar un número secuencial, el cual vaya cambiando automáticamente según el número de registros que muestre la tabla. [![](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto1.png)](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto1.png)
 2. En la tabla que muestra la aplicación hay una columna llamada **Estado** la cuál tiene tres posibles valores: "Aprobado, Suspenso y Reprobado". Dicho estado se encuentra quemado en código. Se desea cambiar este comportamiento y generar el estado de manera automática en base al siguiente criterio:
 	- Notas mayores o iguales a 7 ---> Aprobado
 	- Notas entre 5.5 y menores a 7 --> Suspenso
@@ -23,8 +23,8 @@ Clona el repositorio y crea un branch a partir de **main** el cual tenga el sigu
 	
 	[![](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto2.png)](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto2.png)
 3. Una vez completado el punto anterior, agregar un estilo en la columna **Estado** el cual permita mostrar el texto con un fondo color verde claro si el estado es Aprobado, en color amarillo claro si el estado es Suspenso y en color en rojo claro si el estado es Reprobado. [![](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto3.png)](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto3.png)
-4. Junto a la columna Estado, agregar una nueva columna la cual no tendrá ninguna cabecera, sino que contendrá un botón cuyo texto será **See details** cuyo color de fondo será un azul electrico y el color de texto será blanco. [![](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto4.png)](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto4.png)
-5. Agregar la siguiente funcionalidad al botón recientemente agregado. Cuando el usuario hace click sobre este, mostrar un pop-up (Ventana emergente o modal), la cual contenga la siguiente información:
+4. Junto a la columna Estado, agregar una nueva columna la cual no tendrá ninguna cabecera, sino que contendrá un botón cuyo texto será **See details** cuyo color de fondo será un azul eléctrico y el color de texto será blanco. [![](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto4.png)](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto4.png)
+5. Agregar la siguiente funcionalidad al botón recientemente agregado. Cuando el usuario hace clic sobre este, mostrar un pop-up (Ventana emergente o modal), la cual contenga la siguiente información:
 	- Nombre del alumno
 	- Score o calificación obtenida
 	 un botón que permita cerrar la ventana modal [![](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto5.png)](https://github.com/sajaramillo/Interview/blob/main/React/Images/reto5.png)
