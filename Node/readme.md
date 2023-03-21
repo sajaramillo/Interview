@@ -59,5 +59,5 @@ Las validaciones a los parámetros de entrada deben efectuarse antes de procesar
 	}
 
 4. Implemente el método **signin** para ello, crear la ruta respectiva **signin.ts**. El objetivo de este método es poder implementar el logeo de un usuario válido. Esto quiere decir de un correo  existente y una clave válida. Si existe algún error ya sea email o clave incorrecta, devolver la excepción correspondiente. Se tomará en cuenta su criterio para mantener la seguridad del aplicativo.
-5. Dentro del método **signin**, implementar la generación de un token de seguridad **JWT** siempre y cuando el proceso de login sea exitoso. Adicionalmente a ello, almacenar el token en una cookie de sesión.
+5. Dentro del método **signin**, implementar la generación de un token de seguridad **JWT** siempre y cuando el proceso de login sea exitoso. Adicionalmente a ello, almacenar el token en una cookie de sesión. Luego para probar que su implementación es correcta, asegure la ruta **hello.ts** para que solo puedan acceder a ella usuarios logeados.
 6. Implementar el método de singout, para ellos cree la ruta respectiva **sigout.ts** No olvide destruir el token de seguridad.
