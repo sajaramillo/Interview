@@ -18,6 +18,7 @@ namespace Net
             var customer4 = new Customer { Id = 4, Name = "Daniela", LastName = "Guitierrez", Age = 41 };
             var customer5 = new Customer { Id = 5, Name = "Nelson", LastName = "Jara", Age = 18 };
 
+            var stack = new GenericStack<Customer>();
 
             try
             {
@@ -41,6 +42,27 @@ namespace Net
 
 
                 Console.WriteLine(queue.ToString());
+
+
+
+
+                 
+                stack.Push(customer1);
+                stack.Push(customer2);
+                stack.Push(customer3);
+                stack.Push(customer4);
+                stack.Push(customer5);
+
+                Console.WriteLine("Pila: ");
+                Console.WriteLine(stack.ToString());
+
+                Console.WriteLine($"Pila sin un elemento (Pop): {stack.Pop()}");
+
+                Console.WriteLine(stack.ToString());
+                Console.WriteLine($"Siguiente elemento a ser atendido (stackTop): {stack.StackTop()}");
+
+
+                Console.WriteLine(stack.ToString());
 
             }
             catch (Exception ex)

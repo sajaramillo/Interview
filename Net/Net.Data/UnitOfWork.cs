@@ -12,11 +12,11 @@ namespace Net.Data
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _context;
-        public IRepository<Customer> customerRepository { get; }
+        public IRepository<Customer>  CustomerRepository { get; }
         public UnitOfWork(ApplicationDbContext context,IRepository<Customer> customerRepository)
         {
             _context = context;
-             this.customerRepository = customerRepository;
+             this.CustomerRepository = customerRepository;
         }
 
         public async Task SaveChangesAsync() => await _context.SaveChangesAsync();

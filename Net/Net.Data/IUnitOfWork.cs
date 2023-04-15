@@ -9,7 +9,7 @@ namespace Net.Data
 {
     public interface IUnitOfWork
     {
-        IRepository<Customer> customerRepository { get; }
+        IRepository<Customer> CustomerRepository { get; }
         Task SaveChangesAsync();
     }
 }

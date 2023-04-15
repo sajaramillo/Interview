@@ -10,6 +10,11 @@ namespace Net
     public class GenericStack<T> : IOperations<T> where T : class
     {
         public List<T> Stack { get; set; }
+
+        public GenericStack()
+        {
+            Stack = new List<T>();
+        }
         public T Pop()
         {
             var item = StackTop();
