@@ -1,5 +1,6 @@
 ﻿
 using Net;
+using Net.Data.Entities;
 using System.Linq;
 
 namespace Net
