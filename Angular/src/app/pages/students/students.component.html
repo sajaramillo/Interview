@@ -1,0 +1,22 @@
+<div class="container">
+
+    <h2>Lista de estudiantes</h2>
+    <table class="table table-sm">
+        <thead>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Estado</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr class="table-light" *ngFor="let student of data;let i=index">
+                <td>{{i+1}}</td>
+                <td>{{student.name}}</td>
+                <td [class]="getBackgroundClass(student.score)">{{student.score | score}}</td>
+                <td><button class="btn btn-primary" (click)="openModal(student)">See Details</button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+

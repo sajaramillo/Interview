@@ -1,0 +1,45 @@
+.details{
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50vw;
+    padding:10px;
+    
+}
+
+.details-title{
+    color:white;
+}
+
+::ng-deep .mat-dialog-container {
+    padding:0 !important;
+    overflow: hidden;
+}
+
+.mat-dialog-title{
+    margin:0;
+}
+
+.information-section{
+    padding:10px;
+}
+
+.mat-dialog-content{
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+margin:0;
+padding:0;  
+}
+
+li{
+    display: flex;
+}
+
+
+.information-data{
+    font-weight: 400;
+}

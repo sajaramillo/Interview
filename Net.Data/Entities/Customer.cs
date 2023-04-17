@@ -1,5 +1,6 @@
 using System;
-namespace Net
+
+namespace Net.Data.Entities
 {
     public class Customer
     {
