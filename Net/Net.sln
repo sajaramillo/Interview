@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net", "Net.csproj", "{3A9B2521-CEE7-4878-B35A-D4D732C3B49A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net", "Net\Net.csproj", "{3A9B2521-CEE7-4878-B35A-D4D732C3B49A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Data", "Net.Data\Net.Data.csproj", "{C3227055-4C71-4F91-B8EE-AE68B3E2A460}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.API", "Net.API\Net.API.csproj", "{A5BB02ED-0C48-4B81-AC64-E71684CBF283}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{3A9B2521-CEE7-4878-B35A-D4D732C3B49A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A9B2521-CEE7-4878-B35A-D4D732C3B49A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A9B2521-CEE7-4878-B35A-D4D732C3B49A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3227055-4C71-4F91-B8EE-AE68B3E2A460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3227055-4C71-4F91-B8EE-AE68B3E2A460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3227055-4C71-4F91-B8EE-AE68B3E2A460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3227055-4C71-4F91-B8EE-AE68B3E2A460}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5BB02ED-0C48-4B81-AC64-E71684CBF283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5BB02ED-0C48-4B81-AC64-E71684CBF283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5BB02ED-0C48-4B81-AC64-E71684CBF283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5BB02ED-0C48-4B81-AC64-E71684CBF283}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

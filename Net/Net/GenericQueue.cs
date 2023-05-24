@@ -20,13 +20,9 @@ namespace Net
         }
         public T Pop()
         {
-            if (Queue.Count > 0)
-            {
-                var response = Queue[0];
-                Queue.RemoveAt(0);
-                return response;
-            }
-            throw new Exception("Queue is empty");
+            var item = StackTop();
+            Queue.RemoveAt(0);
+            return item;
         }
 
         public T StackTop()
@@ -38,6 +34,7 @@ namespace Net
             }
             throw new Exception("Queue is empty");
         }
+
         public override string ToString()
         {
             var response = string.Empty;
