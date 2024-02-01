@@ -1,24 +1,52 @@
-import {React} from "react";
+import {React, useEffect, useState} from "react";
+import StudentModal from "../studentModal";
+import axios from 'axios';
+
+const Student =()=>{
+  const [studentList, setStudentList] = useState([]);
+
+  useEffect(()=>{
+    axios.get('https://65bb1241b4d53c066553f4ea.mockapi.io/api/v1/users')
+    .then(response=>setStudentList(response.data)) 
+
+  },
+  []);
 
 
-export default ()=>{
-    const studentList =
-    [
-        {name:'Juan Santamaría', score:9.75, status:'Aprobado'},
-        {name:'Carlos Ugarte', score:6.25,  status:'Suspenso'},
-        {name:'María Armijos', score:8.50,  status:'Aprobado'},
-        {name:'José Baquero', score:5.15,  status:'Reprobado'},
-        {name:'Carlos Ordoñez', score:7.75,  status:'Aprobado'},
-    ];
 
-    function getClassNameByStatus(estado){
-        switch(estado){
-            case 'Aprobado': return 'table-success';
-            case 'Reprobado': return 'table-danger';
-            case 'Suspenso': return 'table-warning';            
-            default: return 'primary'
+    function getClassNameByStatus(score){
+      let status;
+        switch(true){
+            case score >=7: status ='Aprobado';
+            break;
+            case score >=5.5 && score <7: status = 'Suspenso';
+            break;
+            default: status = 'Reprobado';
         }
+        return status;
     }
+    function getStatusColor(status){
+      switch(status){
+        case 'Aprobado':
+          return {backgroundColor:'#C2F9C0'};
+        case 'Suspenso':
+          return {backgroundColor: '#FCFC8F'};
+        case 'Reprobado':
+          return {backgroundColor: '#F08080'};
+        default:
+          return;
+      }
+    }
+    const [selectedStudent, setSelectedStudent] = useState(null);
+
+    const openModal = (student) => {
+        setSelectedStudent(student);
+    };
+
+    const closeModal = () => {
+        setSelectedStudent(null);
+    };
+
     return(
         <div>
             <h2>Lista de estudiantes</h2>
@@ -30,15 +58,28 @@ export default ()=>{
                 </thead>
                 <tbody>
                     {
-                        studentList.map((student) =>                        
+                        studentList.map((student, index) =>                        
                             <tr className="table-light">
-                                <td>{1}</td>
+                                <td>{index +1}</td>
                                 <td>{student.name}</td>
-                                <td>{student.status}</td>                                
+                                <td style={getStatusColor(getClassNameByStatus(student.score))}>
+                                    {getClassNameByStatus(student.score)}  
+                                </td> 
+                                <td>
+                                  <button style={{backgroundColor: '#007BFF', 
+                                        color: '#FFFFFF', 
+                                        border: 'none', 
+                                        borderRadius: '5px'}} onClick={() => openModal(student)}>See Details</button>
+                                </td>                               
                             </tr>                        
                     )}
                 </tbody>
             </table>
+            {selectedStudent && (
+                <StudentModal student={selectedStudent} closeModal={closeModal} status={getClassNameByStatus(selectedStudent.score)}/>
+            )}
         </div>
     );
-}
+};
+
+export default Student;
