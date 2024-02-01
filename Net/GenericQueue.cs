@@ -1,7 +1,5 @@
-using System.IO;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Net
 {
@@ -18,7 +16,18 @@ namespace Net
         {
             Queue.Add(element);
         }
+
         public T Pop()
+        {
+            return GetElementAndRemove();
+        }
+
+        public T StackTop()
+        {
+            return GetElement();
+        }
+
+        private T GetElementAndRemove()
         {
             if (Queue.Count > 0)
             {
@@ -29,7 +38,7 @@ namespace Net
             throw new Exception("Queue is empty");
         }
 
-        public T StackTop()
+        private T GetElement()
         {
             if (Queue.Count > 0)
             {
@@ -38,6 +47,7 @@ namespace Net
             }
             throw new Exception("Queue is empty");
         }
+
         public override string ToString()
         {
             var response = string.Empty;
@@ -46,8 +56,6 @@ namespace Net
                 response += element.ToString() + Environment.NewLine;
             }
             return response;
-
         }
-
     }
 }
