@@ -1,24 +1,42 @@
 import {React} from "react";
+import { useState ,useEffect } from "react";
+import axios from "axios";
+import StudentModal from "./StudentModal";
 
 
-export default ()=>{
-    const studentList =
-    [
-        {name:'Juan Santamaría', score:9.75, status:'Aprobado'},
-        {name:'Carlos Ugarte', score:6.25,  status:'Suspenso'},
-        {name:'María Armijos', score:8.50,  status:'Aprobado'},
-        {name:'José Baquero', score:5.15,  status:'Reprobado'},
-        {name:'Carlos Ordoñez', score:7.75,  status:'Aprobado'},
-    ];
+const Student = ()=>{
+    const [studentList, setStudentList] = useState([]);
+    const [modalState, setModalState] = useState(false);
+    const [studentModal, setStudentModal] = useState("")
+    
+    useEffect(()=>{
+        axios.get(`https://65bab8cdb4d53c0665538761.mockapi.io/api/v1/students`)
+        .then(response => setStudentList(response.data))
+    }, []);
 
-    function getClassNameByStatus(estado){
-        switch(estado){
-            case 'Aprobado': return 'table-success';
-            case 'Reprobado': return 'table-danger';
-            case 'Suspenso': return 'table-warning';            
-            default: return 'primary'
-        }
-    }
+
+    const assignStatus = (score) => {
+        if (score >= 7) return 'Aprobado';
+        if (score >= 5.5) return 'Suspenso';
+        if (score < 5.5) return 'Reprobado';
+      };
+
+    function getClassNameByStatus(score){
+        if (score >= 7) return 'table-success';
+        if (score < 5.5) return 'table-danger';
+        if (score >= 5.5) return 'table-warning';           
+        
+    };
+
+    const handleClickModal = (student) => {
+        setStudentModal(student);
+        setModalState(true);
+      };
+    
+      const handleCloseModal = () => {
+        setModalState(false);
+      };
+
     return(
         <div>
             <h2>Lista de estudiantes</h2>
@@ -30,15 +48,20 @@ export default ()=>{
                 </thead>
                 <tbody>
                     {
-                        studentList.map((student) =>                        
-                            <tr className="table-light">
-                                <td>{1}</td>
+                        studentList.map((student, index) =>                        
+                            <tr key={index} className="table-light">
+                                <td>{index + 1}</td>
                                 <td>{student.name}</td>
-                                <td>{student.status}</td>                                
+                                <td className={getClassNameByStatus(student.score)}>{assignStatus(student.score)}</td>        
+                                <td><button className="details-button" onClick={() => handleClickModal(student)}>See details</button></td>                        
                             </tr>                        
                     )}
                 </tbody>
             </table>
+            {modalState && <StudentModal student={studentModal} onClose={handleCloseModal} />}
+
         </div>
     );
-}
+};
+
+export default Student;
